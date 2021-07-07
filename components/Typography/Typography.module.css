@@ -1,0 +1,76 @@
+.heading {
+  font-family: var(--font-primary);
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.14;
+}
+
+.sub-heading {
+  font-family: var(--font-primary);
+  font-size: 3.5rem;
+  font-weight: 600;
+  line-height: 1.14;
+}
+
+.body {
+  font-family: var(--font-secondary);
+  font-size: 0.875rem;
+  line-height: 1.24;
+}
+
+.title {
+  font-family: var(--font-secondary);
+  font-size: 1.25rem;
+  line-height: 1.24;
+}
+
+.caption {
+  font-family: var(--font-secondary);
+  font-size: 1.125rem;
+  font-weight: 300;
+}
+
+@media screen and (min-width: 768px) {
+  .heading {
+    font-size: 4.625rem;
+  }
+
+  .sub-heading {
+    font-size: 6.25rem;
+  }
+
+  .body {
+    font-size: 1rem;
+  }
+
+  .title {
+    font-size: 1.625rem;
+  }
+
+  .caption {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .heading {
+    font-size: 6.25rem;
+  }
+
+  .sub-heading {
+    font-size: 9rem;
+  }
+
+  .body {
+    font-size: 1.125rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .caption {
+    font-size: 1.125rem;
+  }
+}
