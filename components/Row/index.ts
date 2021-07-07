@@ -1,1 +1,2 @@
-export { default as Row, AlignPosition, JustifyPosition } from './Row';
+export * from './types';
+export { default } from './Row';

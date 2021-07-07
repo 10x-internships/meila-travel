@@ -1,27 +1,17 @@
 import clsx from 'clsx';
+import { HTMLAttributes } from 'react';
+
+import { AlignPosition, JustifyPosition } from './types';
+
 import styles from './Row.module.css';
 
-enum AlignPosition {
-  Center = 'center',
-  Start = 'start',
-  End = 'end',
-  Baseline = 'baseline',
-}
-
-enum JustifyPosition {
-  Between = 'between',
-  Center = 'center',
-}
-
-type RowProps = {
+interface RowProps extends HTMLAttributes<HTMLDivElement> {
   alignItem?: AlignPosition;
   justifyContent?: JustifyPosition;
   noWrap?: boolean;
-  className?: string;
-};
+}
 
-const Row: React.FC<RowProps> = (props) => {
-  const { alignItem, justifyContent, noWrap, className, children } = props;
+const Row: React.FC<RowProps> = ({ alignItem, justifyContent, noWrap, className, children, ...others }) => {
   return (
     <div
       className={clsx(
@@ -31,6 +21,7 @@ const Row: React.FC<RowProps> = (props) => {
         noWrap && styles.nowrap,
         className
       )}
+      {...others}
     >
       {children}
     </div>

@@ -1,31 +1,16 @@
 import clsx from 'clsx';
+import { HTMLAttributes } from 'react';
+
 import styles from './Col.module.css';
 
-export enum ColNum {
-  ONE = 1,
-  TWO,
-  THREE,
-  FOUR,
-  FIVE,
-  SIX,
-  SEVEN,
-  EIGHT,
-  NINE,
-  TEN,
-  ELEVEN,
-  TWELVE,
+interface ColProps extends HTMLAttributes<HTMLDivElement> {
+  col?: number; // column for mobile device
+  md?: number; // column for tablet portrait device
+  lg?: number; // column for tablet landscape device
+  xl?: number; // column for desktop device
 }
 
-type ColProps = {
-  col?: ColNum; // column for mobile device
-  md?: ColNum; // column for tablet portrait device
-  lg?: ColNum; // column for tablet landscape device
-  xl?: ColNum; // column for desktop device
-  className?: string;
-};
-
-const Col: React.FC<ColProps> = (props) => {
-  const { col, md, lg, xl, className, children } = props;
+const Col: React.FC<ColProps> = ({ col, md, lg, xl, className, children, ...others }) => {
   return (
     <div
       className={clsx(
@@ -36,6 +21,7 @@ const Col: React.FC<ColProps> = (props) => {
         xl && styles[`col-xl-${xl}`],
         className
       )}
+      {...others}
     >
       {children}
     </div>

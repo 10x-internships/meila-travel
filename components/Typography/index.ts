@@ -1,1 +1,2 @@
-export { default as Typography, TypographyTag, TypographyVariants } from './Typography';
+export * from './types';
+export { default } from './Typography';
