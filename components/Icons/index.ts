@@ -1,4 +1,4 @@
 export { default as Search } from './Search';
-export { default as LeftArrow } from './LeftArrow';
-export { default as RightArrow } from './RightArrow';
-export { default as DownArrow } from './DownArrow';
+export { default as ArrowLeft } from './ArrowLeft';
+export { default as ArrowRight } from './ArrowRight';
+export { default as ArrowDown } from './ArrowDown';
