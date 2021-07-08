@@ -1,0 +1,85 @@
+.hero {
+  margin-top: 3rem;
+  overflow: hidden;
+}
+
+.hero-row {
+  position: relative;
+}
+
+/* Style for hero info */
+.hero-info {
+  padding-top: 1.8rem;
+}
+
+.hero-description {
+  width: 50%;
+  margin-top: 0.75rem;
+}
+
+.hero-arrow-down {
+  display: none;
+}
+
+/* Style for hero image */
+.hero-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  transform: translateX(4.25rem);
+}
+
+.hero-cta {
+  position: absolute;
+  bottom: -4rem;
+  left: -3.3rem;
+  max-width: 5.3rem;
+}
+
+/* Style for hero topic */
+.hero-topics {
+  margin-top: 7.625rem;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-cta {
+    position: absolute;
+    bottom: 2rem;
+    left: -3.3rem;
+    max-width: 5.3rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-image {
+    position: static;
+    transform: translateX(0);
+  }
+
+  .hero-cta {
+    position: static;
+    max-width: 100%;
+    margin-top: 2.5rem;
+    text-align: center;
+  }
+
+  .hero-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-info h1 {
+    white-space: nowrap;
+  }
+
+  .hero-description {
+    width: 100%;
+    margin-top: 0.75rem;
+  }
+
+  .hero-arrow-down {
+    display: block;
+    margin-top: auto;
+  }
+}
