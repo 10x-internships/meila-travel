@@ -1,0 +1,42 @@
+.nav {
+  display: none;
+}
+
+.nav-list {
+  list-style: none;
+}
+
+.nav-link {
+  color: var(--color-black);
+  display: inline-block;
+  transition: all 0.25s ease-in;
+}
+
+.nav-link:hover,
+.nav-search:hover {
+  opacity: 0.5;
+}
+
+.nav-search {
+  cursor: pointer;
+  transition: all 0.25s ease-in;
+}
+
+.nav-search svg {
+  display: block;
+}
+
+@media screen and (min-width: 1024px) {
+  .nav {
+    display: block;
+  }
+
+  .nav-list {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-item:not(:first-child) {
+    margin-left: 2.5rem;
+  }
+}
