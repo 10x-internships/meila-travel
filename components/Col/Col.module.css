@@ -1,6 +1,6 @@
 .col {
   --gutter: 1.25rem;
-  margin-left: 1.25rem;
+  margin-left: var(--gutter);
 }
 
 .col-1 {
@@ -156,8 +156,7 @@
 /* Desktop screen */
 @media screen and (min-width: 1200px) {
   .col {
-    --gutter: 1.875rem;
-    margin-left: 1.875rem;
+    --gutter: 2.5rem;
   }
 
   .col-xl-1 {
