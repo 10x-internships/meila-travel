@@ -42,16 +42,30 @@
   margin-top: 7.625rem;
 }
 
+.hero-topics h2 {
+  margin-bottom: 1rem;
+  font-family: var(--font-secondary);
+  font-size: 12px;
+  line-height: 1.24;
+  text-transform: uppercase;
+}
+
 @media screen and (min-width: 768px) {
   .hero-cta {
-    position: absolute;
-    bottom: 2rem;
-    left: -3.3rem;
-    max-width: 5.3rem;
+    bottom: 1rem;
+    left: -3rem;
+  }
+
+  .hero-topics {
+    margin-top: 8rem;
   }
 }
 
 @media screen and (min-width: 1024px) {
+  .hero {
+    margin-top: 6rem;
+  }
+
   .hero-image {
     position: static;
     transform: translateX(0);
@@ -81,5 +95,27 @@
   .hero-arrow-down {
     display: block;
     margin-top: auto;
+    animation: slide 1s linear infinite;
+    animation-direction: alternate;
+  }
+
+  .hero-topics {
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-topics {
+    margin-top: 4.125rem;
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateY(-1rem);
+  }
+
+  100% {
+    transform: translateY(0);
   }
 }

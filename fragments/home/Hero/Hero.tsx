@@ -5,10 +5,12 @@ import Col from '@components/Col';
 import Row from '@components/Row';
 import Typography, { TypographyTag, TypographyVariants } from '@components/Typography';
 import { ArrowDown } from '@components/Icons';
+import HeroTopic from './HeroTopic';
 
-import styles from './Hero.module.css';
+import styles from './styles/Hero.module.css';
 import heroImage from 'public/images/hero-image.jpg';
 import heroCTA from 'public/images/hero-cta.png';
+import topicData from './topicData';
 
 const Hero = () => {
   return (
@@ -38,7 +40,10 @@ const Hero = () => {
             </div>
           </Col>
           <Col className={styles['hero-topics']} md={12} lg={4}>
-            Hero topics
+            <h2>Related topics</h2>
+            {topicData.map((topic) => (
+              <HeroTopic key={topic.id} {...topic} />
+            ))}
           </Col>
         </Row>
       </Container>
