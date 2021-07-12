@@ -1,11 +1,8 @@
-import Image from 'next/image';
-
 import Container from '@components/Container';
 import Typography, { TypographyTag, TypographyVariants } from '@components/Typography';
+import DestinationsSlider from './DestinationsSlider';
 
-import styles from './Destinations.module.css';
-import europe from 'public/images/europe.jpg';
-import { ArrowRight } from '@components/Icons';
+import styles from './styles/Destinations.module.css';
 
 const Destinations = () => {
   return (
@@ -14,29 +11,14 @@ const Destinations = () => {
         <Typography tagName={TypographyTag.H2} variant={TypographyVariants.SubHeading}>
           Destinations
         </Typography>
-        <div className={styles.slider}>
-          <div className={styles['slider-wrapper']}>
-            <div className={styles['slider-item']}>
-              <Image src={europe} alt="Europe" objectFit="cover" layout="responsive" />
-              <div className={styles['slider-info']}>
-                <h3>Europe</h3>
-                <span>
-                  Read more <ArrowRight />
-                </span>
-              </div>
-            </div>
-          </div>
+        <DestinationsSlider />
+        <div className={styles.destinationsDesc}>
+          <p>
+            Travelling to Europe is a true adventure! The continent is filled with diverse countries, cultures,
+            cuisines, history and languages making a trip to Europe educational, inspiring and just plain fun!
+          </p>
         </div>
       </Container>
-      <div className={styles['slider-category-a']}>
-        <ul className={styles['slider-category']}>
-          <li>Australia</li>
-          <li>Asia</li>
-          <li className={styles.active}>Europe</li>
-          <li>Africa</li>
-          <li>South Africa</li>
-        </ul>
-      </div>
     </section>
   );
 };
