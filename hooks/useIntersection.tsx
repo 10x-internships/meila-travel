@@ -8,14 +8,17 @@ const useIntersection = (elementRef: RefObject<Element>, options: IntersectionOb
     const observer = new IntersectionObserver((entries, observer) => {
       const [entry] = entries;
       if (entry.isIntersecting) {
-        console.log(entry);
         setIsVisible(true);
-        observer.unobserve(entry.target);
+        observer.disconnect();
       }
     }, options);
 
     if (target) observer.observe(target);
     else console.error('no elementRef');
+
+    return () => {
+      observer.disconnect();
+    };
   }, [elementRef, options]);
 
   return isVisible;
