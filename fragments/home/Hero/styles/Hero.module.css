@@ -10,6 +10,13 @@
 /* Style for hero info */
 .hero-info {
   padding-top: 1.8rem;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-info h1 span {
+  mix-blend-mode: difference;
+  filter: drop-shadow(2px 4px 4px white);
 }
 
 .hero-description {
@@ -26,8 +33,9 @@
   position: absolute;
   top: 0;
   right: 0;
-  z-index: -1;
+  z-index: 1;
   transform: translateX(4.25rem);
+  background-color: #fff;
 }
 
 .hero-cta {

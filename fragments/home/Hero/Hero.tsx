@@ -19,9 +19,10 @@ const Hero = () => {
         <Row className={styles['hero-row']}>
           <Col className={styles['hero-info']} lg={4}>
             <Typography tagName={TypographyTag.H1} variant={TypographyVariants.Heading}>
-              Explore Banff & <br />
-              Lake Louise, <br />
-              Canada
+              <span>Explore Banff & </span>
+              <br />
+              <span>Lake Louise,</span> <br />
+              <span>Canada</span>
             </Typography>
             <Typography tagName={TypographyTag.Paragraph} className={styles['hero-description']}>
               Standing at the edge of Lake Louise - the soaring Victoria Glacier, canoes gliding through turquoise water
@@ -33,7 +34,7 @@ const Hero = () => {
           </Col>
           <Col className={styles['hero-image']} col={8} md={6} lg={4}>
             <div>
-              <Image src={heroImage} alt="A man standing on a rock" />
+              <Image src={heroImage} alt="A man standing on a rock" placeholder="blur" />
             </div>
             <div className={styles['hero-cta']}>
               <Image src={heroCTA} alt="Hero CTA" />
