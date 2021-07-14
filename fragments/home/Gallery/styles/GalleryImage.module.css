@@ -1,0 +1,33 @@
+.GalleryImageWrapper {
+  --transition: opacity 0.25s linear;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.GalleryImageWrapper > * {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.imageBlurHash {
+  transition: var(--transition);
+  z-index: 2;
+}
+
+.GalleryImageWrapper img {
+  transition: var(--transition);
+  z-index: 1;
+}
+
+.GalleryImageWrapper.isLoaded .imageBlurHash {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.GalleryImageWrapper.isLoaded img {
+  opacity: 1;
+}

@@ -121,6 +121,10 @@
     margin-top: 12.5rem;
   }
 
+  .gallery h2 {
+    text-shadow: -7.5rem 3.5rem 0 var(--color-black-light);
+  }
+
   .galleryImage {
     grid-template-rows: repeat(2, 17rem);
   }
