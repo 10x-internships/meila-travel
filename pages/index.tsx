@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Hero from '@fragments/home/Hero';
 import Destinations from '@fragments/home/Destinations';
+import Gallery from '@fragments/home/Gallery';
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       </Head>
       <Hero />
       <Destinations />
+      <Gallery />
     </>
   );
 }

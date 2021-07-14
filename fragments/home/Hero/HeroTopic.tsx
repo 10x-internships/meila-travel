@@ -16,17 +16,17 @@ const HeroTopic = ({ title, author, link }: HeroTopicProps) => {
     <article className={styles['hero-topic']}>
       <Link href={link} passHref>
         <a className={styles['hero-topic-link']}>
-          <div>
+          <span>
             <Typography tagName={TypographyTag.H3} variant={TypographyVariants.Title}>
               {title}
             </Typography>
             <Typography tagName={TypographyTag.Paragraph} className={styles['hero-topic-author']}>
               by {author}
             </Typography>
-          </div>
-          <div>
+          </span>
+          <span>
             <ArrowRight />
-          </div>
+          </span>
         </a>
       </Link>
     </article>
