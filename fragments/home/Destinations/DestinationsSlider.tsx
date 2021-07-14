@@ -52,7 +52,7 @@ const DestinationsSlider = () => {
       <Slider {...sliderSettings} className={styles.DestinationSlider} ref={sliderRef}>
         {sliderData.map((slider) => (
           <div key={slider.name} className={styles.sliderItem}>
-            <Image src={slider.image} alt="Africa" objectFit="cover" layout="fill" />
+            <Image src={slider.image} alt="Africa" objectFit="cover" layout="fill" placeholder="blur" />
             <div className={styles.sliderInfo}>
               <h3>{slider.name}</h3>
               <span>
